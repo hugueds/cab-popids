@@ -1,0 +1,83 @@
+#root {
+    background-color: #53565A;
+}
+
+.popid-wrapper {
+    width: 100%;
+    display: flex;         
+    margin-top: 1.5%;     
+    background: #97999B;
+}
+
+
+.popid-station {
+    font-size: 1.4vh;
+    color: white;
+    text-shadow: 0 0 5px #000;
+    font-weight: bold;
+    display: flex;
+    margin: 0 auto;    
+    align-self: center;
+    justify-content: center;
+    width: 20%;
+}
+
+.popid-consumed {
+    background-color: #5da7a9 !important;
+}
+
+.popid-buffer {
+    background-color: #005d6d !important;
+}
+
+.popid-value {
+    text-shadow: 0 0 5px #000;
+    color: #e1a93e;
+    font-size: 3vh;
+    font-weight: bold;
+    display: flex;
+    margin: 0 auto;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+    width: 70%;        
+    
+}
+
+.popid-button {    
+    display: flex;
+    flex: 1 1 auto;
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.scania-colors {
+    color: #C8C9C7;
+    color: #97999B;
+    color: #53565A ;
+    color: #2D2926;
+    color: #E35205;
+    color: #CEB888;
+    color: #94A596;
+    color: #2C5234;
+    color: #448691;
+    color: #5e3885;
+    color: #005d6d;
+    color: #e1a93e;
+    color: #896a73;
+    color: #5da7a9;
+    color: #60b269;    
+    color: #041E42;
+    color: #fafafa;
+}
+
+button {
+    width: 100%;
+    height: 5vh;
+    color: white;
+    background: #60b269;
+}

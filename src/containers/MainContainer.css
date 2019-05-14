@@ -1,0 +1,21 @@
+body {
+    background-color: #53565A;
+}
+
+.main-container {
+    width: 90%;
+    display: flex;    
+    margin: 0 auto;
+    background-color: #53565A;
+}
+
+.pops-container {
+    width: 75%;    
+}
+
+.checkedList-container {
+    width: 22%;
+    margin-left: 3%;
+    margin-top: 1%;
+    border: 1px solid #FFF;
+}

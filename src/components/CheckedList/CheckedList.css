@@ -1,0 +1,19 @@
+.checked-list-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    color: white;
+    width: 100%;
+    border: 1px solid white;
+    flex-wrap: wrap;    
+}
+
+.checked-popid {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.9vh;
+    display: flex;
+    text-align: center;
+    margin-top: 2%;
+    
+}
