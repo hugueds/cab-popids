@@ -4,17 +4,27 @@ body {
 
 .main-container {
     width: 90%;
-    display: flex;    
+    display: flex;
+    flex-wrap: wrap;
     margin: 0 auto;
-    background-color: #53565A;
+}
+
+.takt-container {
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 2.5%;
+    margin-bottom: 1%;
+    /* flex-wrap: wrap; */
+    border: 1px solid 0;
 }
 
 .pops-container {
-    width: 75%;    
+    width: 72%;
 }
 
 .checkedList-container {
-    width: 22%;
+    width: 20%;
     margin-left: 3%;
     margin-top: 1%;
     border: 1px solid #FFF;

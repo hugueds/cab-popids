@@ -2,9 +2,6 @@ import React from 'react';
 import './CheckedList.css';
 
 export default function CheckedList(props) {
-
- 
-
   return (
     <div className="checked-list-wrapper">      
      {

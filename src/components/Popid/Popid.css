@@ -7,6 +7,7 @@
     display: flex;         
     margin-top: 1.5%;     
     background: #97999B;
+    color: #e1a93e;
 }
 
 
@@ -32,7 +33,7 @@
 
 .popid-value {
     text-shadow: 0 0 5px #000;
-    color: #e1a93e;
+    
     font-size: 3vh;
     font-weight: bold;
     display: flex;
@@ -49,6 +50,11 @@
     display: flex;
     flex: 1 1 auto;
     margin: 0 auto;
+}
+
+.popid-checked {
+    color: white !important;
+    background: #60b269 !important;
 }
 
 .hidden {
