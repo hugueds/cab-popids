@@ -4,6 +4,7 @@
     "type": "git",
     "url": "https://github.com/hugueds/cab-popids.git"
   },
+  "homepage": "http://10.8.66.4/cab-list/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

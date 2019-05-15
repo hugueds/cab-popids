@@ -9,15 +9,26 @@ const style = {
       justifyContent: 'center',
       border: '1px solid white',
       flex: '1 1 auto',
-      background: 'white'
+      background: 'white',
+      fontSize: '5vh'
+    },
+    takt: {
+        
+    },
+    negative: {
+        background: 'red',
+        color: 'white',
+        width: '100%'
     }
   }
 
 
 export default function Takt(props) {    
+    const negative = props.takt < 0;
+    const stringTakt = convertMsToTime(props.takt);
   return (
     <div className="takt-wrapper" style={style.root}>
-      <div>00:00</div>      
+      <div style={negative ? style.negative : null }>{stringTakt}</div>      
       {/* <div>{props.takt}</div>       */}
     </div>
   )

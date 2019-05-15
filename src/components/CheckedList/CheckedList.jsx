@@ -1,7 +1,12 @@
 import React from 'react';
 import './CheckedList.css';
 
+function removePopid() {
+  const popids = JSON.parse(window.localStorage.getItem('checkedList'));
+}
+
 export default function CheckedList(props) {
+  
   return (
     <div className="checked-list-wrapper">      
      {

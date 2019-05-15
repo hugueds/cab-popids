@@ -13,8 +13,8 @@ body {
     width: 90%;
     display: flex;
     margin: 0 auto;
-    margin-top: 2.5%;
-    margin-bottom: 1%;
+    margin-top: 5%;
+    margin-bottom: 2%;
     /* flex-wrap: wrap; */
     border: 1px solid 0;
 }
@@ -26,6 +26,6 @@ body {
 .checkedList-container {
     width: 20%;
     margin-left: 3%;
-    margin-top: 1%;
+    margin-top: 2%;
     border: 1px solid #FFF;
 }

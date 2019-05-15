@@ -13,7 +13,8 @@ let testN = '123456';
 export default class MainContainer extends Component {
 
     state = {
-        popids: dummy().popids,
+        // popids: dummy().popids,
+        popids: [],
         checkedList: [],
         selected: "",
         next: "",
@@ -27,7 +28,10 @@ export default class MainContainer extends Component {
         if (awns) {
             // Verificar se popid ja está na lista                                    
             if (!this.state.checkedList.includes(param)) {
-                const checkedList = [...this.state.checkedList, param];
+                const checkedList = [param, ...this.state.checkedList];
+                if (checkedList.length > 32) {
+                    checkedList.splice(-1);
+                }
                 const popids = [...this.state.popids];
                 const popid = popids.find((x) => x.value === param);
                 popid.checked = true;
@@ -45,8 +49,7 @@ export default class MainContainer extends Component {
         // Buscar popids salvos no localstorage
         const checkedList = JSON.parse(window.localStorage.getItem('checkedList'));
 
-        if (checkedList && checkedList.length) {
-            // Para cada item da checklist, pegar o popid e marcar como checked
+        if (checkedList && checkedList.length) {            
             const popids = [...this.state.popids];
             const popidsValues = popids.map(x => x.value);
             checkedList.map((a, b) => {
@@ -59,6 +62,8 @@ export default class MainContainer extends Component {
             this.setState({ checkedList });
         }
 
+        this.initSocket();
+
 
         // OFFLINE TEST
         // setInterval(() => {
@@ -69,9 +74,6 @@ export default class MainContainer extends Component {
         //     popids.splice(-1);            
         //     this.setState({popids});
         // }, 5000);
-        // this.initSocket();
-
-
     }
 
     initSocket = () => {
@@ -99,8 +101,7 @@ export default class MainContainer extends Component {
                         value: '000000'
                     });
                 } else {
-                    const checked = this.state.checkedList.includes(data[i].popid)
-                    console.log(checked);
+                    const checked = this.state.checkedList.includes(data[i].popid)                    
                     popids.push({
                         station,
                         value: popid,
@@ -113,12 +114,13 @@ export default class MainContainer extends Component {
 
         socket.on('server takt', (data) => {
             if (!data) return;
+            const takt = data.time_ML2;
+            this.setState({takt});
         });
 
         socket.on('plc-status', (status) => {
             if (!status) {
-                console.error('Falha na conexão com o PLC');
-                // $("#restart-button").show();
+                console.error('Falha na conexão com o PLC');                
                 return;
             }
             // $("#restart-button").hide();

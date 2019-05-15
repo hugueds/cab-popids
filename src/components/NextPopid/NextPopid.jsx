@@ -14,8 +14,8 @@ const style = {
 export default function NextPopid(props) {
   return (
     <div className="nextPopid-wrapper" style={style.root}>
-      <div>PRÓXIMO</div>
-      <div>123456</div>
+      <div></div>
+      <div></div>
       {/* <div>{props.next}</div> */}
     </div>
   )
